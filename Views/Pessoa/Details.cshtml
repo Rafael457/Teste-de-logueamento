@@ -1,0 +1,36 @@
+﻿@model bibliotecalogteste.Models.Pessoa
+@{
+    ViewData["Title"] = "Details";
+}
+
+<head>
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/bibliotecalogteste.styles.css" asp-append-version="true" />
+
+    </head>
+
+<h1>Details</h1>
+
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a href="@Url.Action("Edit","Pessoa")/@Model.Id">Edit</a> |
+    <a href="@Url.Action("Index","Pessoa")">Back to List</a>
+</div>
